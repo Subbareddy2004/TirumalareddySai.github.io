@@ -187,6 +187,28 @@
                 font-size: 14px;
             }
         }
+        .download-cv {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--card-background);
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .download-cv:hover {
+            background-color: var(--hover-color);
+            transform: translateY(-3px);
+            color: black;
+        }
+        @media (max-width: 768px) {
+            .download-cv {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -200,10 +222,11 @@
                 <p>📍 Markapuram, Andhra Pradesh, India</p>
                 <p>✉️ tirumalareddysai2004@gmail.com</p>
                 <div class="social-icons">
-                    <a href="https://github.com/your-github-username" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/Subbareddy2004" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="mailto:tirumalareddysai2004@gmail.com"><i class="fas fa-envelope"></i></a>
                     <a href="https://www.linkedin.com/in/tirumalareddysai" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
+                <a href="assets/Subbareddy-Resume.pdf" download class="download-cv">Download CV</a>
             </div>
         </div>
 
