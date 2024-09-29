@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subba Reddy - AI & ML Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #64b5f6;
+            --background-color: #121212;
+            --card-background: #1e1e1e;
+            --text-color: #e0e0e0;
+            --light-text-color: #b0b0b0;
+            --hover-color: #90caf9;
+        }
+        body.light-mode {
+            --primary-color: #1976d2;
+            --background-color: #f5f5f5;
+            --card-background: white;
+            --text-color: #333;
+            --light-text-color: #666;
+            --hover-color: #2196f3;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            transition: all 0.3s ease;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            background-color: var(--card-background);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .profile img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-right: 40px;
+            border: 5px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+        .profile img:hover {
+            transform: scale(1.05);
+        }
+        .profile-info h1 {
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+            font-size: 2.5em;
+        }
+        .profile-info p {
+            margin: 5px 0;
+            color: var(--light-text-color);
+        }
+        .social-icons a {
+            margin-right: 15px;
+            text-decoration: none;
+            font-size: 24px;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: var(--hover-color);
+        }
+        .section {
+            background-color: var(--card-background);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+        }
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .timeline-item h3 {
+            margin: 10px 0 5px 0;
+            color: var(--text-color);
+        }
+        .timeline-item p {
+            margin: 0;
+            color: var(--light-text-color);
+        }
+        .skills-list, .languages-list, .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-tag, .language-tag, .interest-tag {
+            background-color: var(--primary-color);
+            color: var(--card-background);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .skill-tag:hover, .language-tag:hover, .interest-tag:hover {
+            transform: translateY(-3px);
+            background-color: var(--hover-color);
+        }
+        #mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: var(--card-background);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        #mode-toggle:hover {
+            background-color: var(--hover-color);
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--hover-color);
+        }
+    </style>
+</head>
+<body>
+    <button id="mode-toggle">Toggle Light Mode</button>
+    <div class="container">
+        <div class="profile">
+            <img src="https://avatars.githubusercontent.com/u/110385733?v=4" alt="Subba Reddy">
+            <div class="profile-info">
+                <h1>Subba Reddy</h1>
+                <p>Software engineer specializing in AI, ML, and full-stack development</p>
+                <p>📍 Markapuram, Andhra Pradesh, India</p>
+                <p>✉️ tirumalareddysai2004@gmail.com</p>
+                <p>🔗 <a href="https://www.linkedin.com/in/tirumalareddysai" target="_blank">LinkedIn</a></p>
+                <div class="social-icons">
+                    <a href="https://github.com/Subbareddy2004" target="_blank">📂</a>
+                    <a href="mailto:tirumalareddysai2004@gmail.com">✉️</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <div class="timeline-item">
+                <div class="timeline-date">Oct 2022 - Apr 2026</div>
+                <h3>Kalasalingam University</h3>
+                <p>Bachelor of Technology - BTech, Artificial Intelligence and Machine Learning</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Dec 2020 - Apr 2022</div>
+                <h3>Sri Sai Vikas Junior College</h3>
+                <p>Intermediate | GPA: 669</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Mar 2019 - Mar 2020</div>
+                <h3>Z P High School</h3>
+                <p>Secondary School Certificate | GPA: 564</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="timeline-item">
+                <div class="timeline-date">Present</div>
+                <h3>IPL Match Prediction</h3>
+                <p>Developed a machine learning model using Random Forest Classifier to predict cricket match outcomes. Incorporated dynamic player impact scores for context-aware predictions. Built an interactive tool where users input match details to receive real-time win probabilities.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Present</div>
+                <h3>YouTube Insights Generator</h3>
+                <p>Built a content automation tool using APIs to extract and summarize YouTube video content. Created a Streamlit-based interface for generating concise summaries, key points, and code explanations, enhancing accessibility for educators, researchers, and content creators.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Core Skills</h2>
+            <div class="skills-list">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Deep Learning</span>
+                <span class="skill-tag">Artificial Intelligence</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">GitHub</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Languages</h2>
+            <div class="languages-list">
+                <span class="language-tag">Telugu (Fluency)</span>
+                <span class="language-tag">English</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Interests</h2>
+            <div class="interests-list">
+                <span class="interest-tag">TechNews</span>
+                <span class="interest-tag">Cricket</span>
+                <span class="interest-tag">Problem Solving</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        const modeToggle = document.getElementById('mode-toggle');
+        const body = document.body;
+
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            if (body.classList.contains('light-mode')) {
+                modeToggle.textContent = 'Toggle Dark Mode';
+            } else {
+                modeToggle.textContent = 'Toggle Light Mode';
+            }
+        });
+    </script>
+</body>
+</html>
