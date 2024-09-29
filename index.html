@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subba Reddy - AI & ML Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #64b5f6;
@@ -34,11 +35,13 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px;
         }
         .profile {
             display: flex;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
             margin-bottom: 40px;
             background-color: var(--card-background);
             border-radius: 15px;
@@ -49,7 +52,7 @@
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            margin-right: 40px;
+            margin-bottom: 20px;
             border: 5px solid var(--primary-color);
             transition: transform 0.3s ease;
         }
@@ -59,14 +62,14 @@
         .profile-info h1 {
             margin: 0 0 10px 0;
             color: var(--primary-color);
-            font-size: 2.5em;
+            font-size: 2em;
         }
         .profile-info p {
             margin: 5px 0;
             color: var(--light-text-color);
         }
         .social-icons a {
-            margin-right: 15px;
+            margin: 0 10px;
             text-decoration: none;
             font-size: 24px;
             color: var(--primary-color);
@@ -78,7 +81,7 @@
         .section {
             background-color: var(--card-background);
             border-radius: 15px;
-            padding: 30px;
+            padding: 20px;
             margin-bottom: 30px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
@@ -87,10 +90,10 @@
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 10px;
             margin-top: 0;
-            font-size: 1.8em;
+            font-size: 1.5em;
         }
         .timeline-item {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .timeline-date {
             font-weight: bold;
@@ -99,10 +102,12 @@
         .timeline-item h3 {
             margin: 10px 0 5px 0;
             color: var(--text-color);
+            font-size: 1.2em;
         }
         .timeline-item p {
             margin: 0;
             color: var(--light-text-color);
+            font-size: 0.9em;
         }
         .skills-list, .languages-list, .interests-list {
             display: flex;
@@ -114,7 +119,7 @@
             color: var(--card-background);
             padding: 5px 15px;
             border-radius: 20px;
-            font-size: 14px;
+            font-size: 0.9em;
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
         .skill-tag:hover, .language-tag:hover, .interest-tag:hover {
@@ -133,6 +138,7 @@
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s ease;
+            z-index: 1000;
         }
         #mode-toggle:hover {
             background-color: var(--hover-color);
@@ -144,6 +150,42 @@
         }
         a:hover {
             color: var(--hover-color);
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .profile {
+                padding: 20px;
+            }
+            .profile img {
+                width: 150px;
+                height: 150px;
+            }
+            .profile-info h1 {
+                font-size: 1.8em;
+            }
+            .section {
+                padding: 15px;
+            }
+            .section h2 {
+                font-size: 1.3em;
+            }
+            .timeline-item h3 {
+                font-size: 1.1em;
+            }
+            .timeline-item p {
+                font-size: 0.85em;
+            }
+            .skill-tag, .language-tag, .interest-tag {
+                font-size: 0.8em;
+            }
+            #mode-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 8px 16px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -157,10 +199,10 @@
                 <p>Software engineer specializing in AI, ML, and full-stack development</p>
                 <p>📍 Markapuram, Andhra Pradesh, India</p>
                 <p>✉️ tirumalareddysai2004@gmail.com</p>
-                <p>🔗 <a href="https://www.linkedin.com/in/tirumalareddysai" target="_blank">LinkedIn</a></p>
                 <div class="social-icons">
-                    <a href="https://github.com/Subbareddy2004" target="_blank">📂</a>
-                    <a href="mailto:tirumalareddysai2004@gmail.com">✉️</a>
+                    <a href="https://github.com/your-github-username" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:tirumalareddysai2004@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/tirumalareddysai" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
