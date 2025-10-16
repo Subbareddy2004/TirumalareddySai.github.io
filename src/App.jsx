@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-[#0a0a0a] text-white">
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Github, ExternalLink, Calendar, Tag, CheckCircle, Lightbulb, TrendingUp } from 'lucide-react'
+import { ArrowLeft, Github, ExternalLink, Calendar, CheckCircle2, Lightbulb, Target } from 'lucide-react'
 import { projectsData } from '../data/projects'
 
 const ProjectDetail = () => {
@@ -12,8 +12,8 @@ const ProjectDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center pt-20">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Project Not Found</h1>
-          <Link to="/" className="text-primary-400 hover:text-primary-300">
+          <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
+          <Link to="/" className="text-blue-400 hover:text-blue-300 transition-colors">
             Return to Home
           </Link>
         </div>
@@ -22,132 +22,114 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen pt-20">
-      {/* Hero Section */}
-      <section className="py-12 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+    <div className="min-h-screen pt-20 bg-[#0a0a0a]">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Link
+            to="/#projects"
+            className="inline-flex items-center space-x-2 text-gray-400 hover:text-white mb-12 transition-colors"
           >
-            <Link
-              to="/#projects"
-              className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 mb-8 transition-colors"
-            >
-              <ArrowLeft size={20} />
-              <span>Back to Projects</span>
-            </Link>
+            <ArrowLeft size={20} />
+            <span>Back</span>
+          </Link>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="flex items-center space-x-4 mb-4">
-                  <span className="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm font-medium">
-                    {project.category}
-                  </span>
-                  <div className="flex items-center space-x-2 text-gray-400">
-                    <Calendar size={16} />
-                    <span>{project.duration}</span>
-                  </div>
-                </div>
-
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-                  {project.title}
-                </h1>
-
-                <p className="text-xl text-gray-300 mb-8">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-4 mb-8">
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-6 py-3 rounded-full hover:scale-105 transition-transform duration-200 shadow-lg"
-                  >
-                    <ExternalLink size={20} />
-                    <span>Live Demo</span>
-                  </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 glass-effect text-white px-6 py-3 rounded-full hover:scale-105 transition-transform duration-200"
-                  >
-                    <Github size={20} />
-                    <span>View Code</span>
-                  </a>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span key={tech} className="tech-badge">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-auto object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                </div>
-              </div>
+          <div className="mb-8">
+            <div className="flex items-center space-x-3 mb-6">
+              <span className="text-xs uppercase tracking-wider text-gray-500 font-medium">
+                {project.category}
+              </span>
+              <span className="text-xs text-gray-600">•</span>
+              <span className="text-xs text-gray-500">{project.duration}</span>
             </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Project Details */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+              {project.title}
+            </h1>
+
+            <p className="text-xl text-gray-400 leading-relaxed mb-8 max-w-3xl">
+              {project.description}
+            </p>
+
+            <div className="flex flex-wrap gap-4 mb-8">
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 bg-white text-black px-5 py-2.5 rounded-lg hover:bg-gray-200 transition-all font-medium"
+              >
+                <ExternalLink size={18} />
+                <span>Live Demo</span>
+              </a>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 bg-white/5 border border-white/10 text-white px-5 py-2.5 rounded-lg hover:bg-white/10 transition-all font-medium"
+              >
+                <Github size={18} />
+                <span>View Code</span>
+              </a>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map((tech) => (
+                <span key={tech} className="px-3 py-1 text-xs bg-white/5 border border-white/10 rounded-lg text-gray-400">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative aspect-video rounded-2xl overflow-hidden mb-16 bg-white/5 border border-white/10">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
-              {/* Features */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <div className="flex items-center space-x-3 mb-6">
-                  <CheckCircle className="text-primary-400" size={24} />
-                  <h2 className="text-3xl font-bold text-white">Key Features</h2>
+                  <CheckCircle2 className="text-blue-400" size={20} />
+                  <h2 className="text-2xl font-semibold">Key Features</h2>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-3">
                   {project.features.map((feature, index) => (
                     <div
                       key={index}
-                      className="flex items-start space-x-3 p-4 glass-effect rounded-lg"
+                      className="flex items-start space-x-3 p-4 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-white/[0.04] hover:border-white/10 transition-all"
                     >
-                      <CheckCircle size={16} className="text-primary-400 mt-1 flex-shrink-0" />
+                      <CheckCircle2 size={16} className="text-blue-400 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
               </motion.div>
 
-              {/* Challenges */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <div className="flex items-center space-x-3 mb-6">
-                  <TrendingUp className="text-secondary-400" size={24} />
-                  <h2 className="text-3xl font-bold text-white">Challenges & Solutions</h2>
+                  <Target className="text-purple-400" size={20} />
+                  <h2 className="text-2xl font-semibold">Challenges & Solutions</h2>
                 </div>
                 <div className="space-y-4">
                   {project.challenges.map((challenge, index) => (
                     <div
                       key={index}
-                      className="p-4 glass-effect rounded-lg border-l-4 border-secondary-400"
+                      className="p-4 bg-white/[0.02] border-l-2 border-purple-400 rounded-lg"
                     >
                       <p className="text-gray-300">{challenge}</p>
                     </div>
@@ -155,21 +137,20 @@ const ProjectDetail = () => {
                 </div>
               </motion.div>
 
-              {/* Learnings */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
               >
                 <div className="flex items-center space-x-3 mb-6">
-                  <Lightbulb className="text-yellow-400" size={24} />
-                  <h2 className="text-3xl font-bold text-white">Key Learnings</h2>
+                  <Lightbulb className="text-yellow-400" size={20} />
+                  <h2 className="text-2xl font-semibold">Key Learnings</h2>
                 </div>
                 <div className="space-y-4">
                   {project.learnings.map((learning, index) => (
                     <div
                       key={index}
-                      className="p-4 glass-effect rounded-lg border-l-4 border-yellow-400"
+                      className="p-4 bg-white/[0.02] border-l-2 border-yellow-400 rounded-lg"
                     >
                       <p className="text-gray-300">{learning}</p>
                     </div>
@@ -178,53 +159,21 @@ const ProjectDetail = () => {
               </motion.div>
             </div>
 
-            {/* Sidebar */}
-            <div className="space-y-8">
-              {/* Project Info */}
+            <div className="space-y-6">
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="glass-effect p-6 rounded-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="bg-white/[0.02] border border-white/5 p-6 rounded-2xl"
               >
-                <h3 className="text-xl font-semibold mb-4 text-white">Project Info</h3>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-gray-400 text-sm">Category</p>
-                    <p className="text-white font-medium">{project.category}</p>
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Duration</p>
-                    <p className="text-white font-medium">{project.duration}</p>
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Technologies</p>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {project.technologies.map((tech) => (
-                        <span key={tech} className="tech-badge text-xs">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Screenshots */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="glass-effect p-6 rounded-2xl"
-              >
-                <h3 className="text-xl font-semibold mb-4 text-white">Screenshots</h3>
+                <h3 className="text-lg font-semibold mb-6">Screenshots</h3>
                 <div className="space-y-4">
                   {project.screenshots.map((screenshot, index) => (
-                    <div key={index} className="relative overflow-hidden rounded-lg">
+                    <div key={index} className="relative overflow-hidden rounded-lg bg-white/5 border border-white/10">
                       <img
                         src={screenshot}
                         alt={`${project.title} screenshot ${index + 1}`}
-                        className="w-full h-32 object-cover hover:scale-110 transition-transform duration-300"
+                        className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   ))}
@@ -232,47 +181,41 @@ const ProjectDetail = () => {
               </motion.div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Related Projects */}
-      <section className="py-16 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-24 pt-16 border-t border-white/5"
           >
-            <h2 className="text-3xl font-bold mb-8 text-center gradient-text">
-              Other Projects
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 className="text-2xl font-semibold mb-8">More Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {projectsData
                 .filter(p => p.id !== project.id)
-                .slice(0, 3)
+                .slice(0, 2)
                 .map((relatedProject) => (
                   <Link
                     key={relatedProject.id}
                     to={`/project/${relatedProject.id}`}
-                    className="project-card group block"
+                    className="group bg-white/[0.02] border border-white/5 rounded-2xl overflow-hidden hover:bg-white/[0.04] hover:border-white/10 transition-all"
                   >
-                    <div className="relative overflow-hidden rounded-t-2xl">
+                    <div className="relative aspect-video overflow-hidden bg-white/5">
                       <img
                         src={relatedProject.image}
                         alt={relatedProject.title}
-                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-primary-400 transition-colors">
+                      <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">
                         {relatedProject.title}
                       </h3>
-                      <p className="text-gray-400 mb-4 line-clamp-2">
+                      <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                         {relatedProject.description}
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {relatedProject.technologies.slice(0, 3).map((tech) => (
-                          <span key={tech} className="tech-badge text-xs">
+                          <span key={tech} className="px-2.5 py-1 text-xs bg-white/5 border border-white/10 rounded-lg text-gray-400">
                             {tech}
                           </span>
                         ))}
@@ -282,8 +225,8 @@ const ProjectDetail = () => {
                 ))}
             </div>
           </motion.div>
-        </div>
-      </section>
+        </motion.div>
+      </div>
     </div>
   )
 }

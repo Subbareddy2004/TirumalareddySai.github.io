@@ -1,49 +1,69 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Code, Palette, Zap, Users } from 'lucide-react'
+import { Code2, Palette, Database, Rocket } from 'lucide-react'
 
 const About = () => {
   const skills = [
-    { name: 'Frontend Development', icon: Code, description: 'React, Vue, Angular, TypeScript' },
-    { name: 'UI/UX Design', icon: Palette, description: 'Figma, Adobe XD, Responsive Design' },
-    { name: 'Backend Development', icon: Zap, description: 'Node.js, Python, MongoDB, PostgreSQL' },
-    { name: 'Team Collaboration', icon: Users, description: 'Git, Agile, Code Reviews' },
+    { 
+      name: 'Frontend', 
+      icon: Code2, 
+      description: 'React, Vue, TypeScript, Tailwind CSS',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Design', 
+      icon: Palette, 
+      description: 'Figma, UI/UX, Responsive Design',
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Backend', 
+      icon: Database, 
+      description: 'Node.js, Python, MongoDB, PostgreSQL',
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Tools', 
+      icon: Rocket, 
+      description: 'Git, Docker, CI/CD, Agile',
+      color: 'from-orange-500 to-red-500'
+    },
   ]
 
   return (
-    <section id="about" className="py-20 bg-slate-800/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-32 border-t border-white/5">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            About Me
+          <h2 className="text-sm uppercase tracking-wider text-gray-400 mb-4 font-medium">
+            About
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            I'm a passionate developer with 3+ years of experience creating
-            beautiful, functional, and user-centered digital experiences.
+          <p className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight max-w-4xl">
+            I'm a passionate developer with <span className="gradient-text">3+ years</span> of experience 
+            creating digital products that users love.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass-effect p-6 rounded-2xl text-center hover:scale-105 transition-transform duration-300"
+              className="group relative bg-white/[0.02] border border-white/5 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300"
             >
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
-                <skill.icon size={32} className="text-white" />
+              <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${skill.color} bg-opacity-10 mb-6`}>
+                <skill.icon size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">{skill.name}</h3>
-              <p className="text-gray-400">{skill.description}</p>
+              <h3 className="text-xl font-semibold mb-3">{skill.name}</h3>
+              <p className="text-gray-400 leading-relaxed">{skill.description}</p>
             </motion.div>
           ))}
         </div>
