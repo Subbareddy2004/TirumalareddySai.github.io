@@ -3,103 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tirumalareddy Subbareddy | AI/ML Portfolio</title>
+  <title>Tirumalareddy Subbareddy | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg: #070b14;
-      --bg-soft: #0e1628;
-      --panel: rgba(16, 25, 45, 0.78);
-      --text: #e8edf8;
-      --muted: #9aabcc;
-      --brand: #6f8cff;
-      --brand-2: #47d6d1;
-      --border: rgba(146, 166, 209, 0.2);
-      --shadow: 0 20px 70px rgba(5, 10, 25, 0.45);
-      --radius: 22px;
+    :root{
+      --bg:#f7f4ef;
+      --paper:#ffffff;
+      --ink:#1a1a1a;
+      --muted:#6b6b6b;
+      --line:#ddd5cb;
+      --accent:#b88351;
+      --accent-soft:#e8d2be;
+      --radius:18px;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 10% 10%, #1a2e66 0%, transparent 35%),
-        radial-gradient(circle at 80% 0%, #114850 0%, transparent 30%),
-        var(--bg);
-      line-height: 1.65;
-    }
-    .container { width: min(1120px, 92vw); margin: 0 auto; }
-    .pill { display:inline-block; border:1px solid var(--border); border-radius:999px; padding:6px 12px; color:var(--muted); font-size:.82rem; }
-    header {
-      position: sticky; top: 0; z-index: 100;
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      background: rgba(7, 11, 20, 0.72);
-    }
-    nav { display:flex; justify-content:space-between; align-items:center; padding: 14px 0; }
-    .logo { font-weight: 800; letter-spacing: .4px; }
-    .logo span { color: var(--brand-2); }
-    .links { display:flex; gap:20px; flex-wrap: wrap; }
-    .links a { color: var(--muted); text-decoration:none; font-weight:600; }
-    .links a:hover { color: var(--text); }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+    .container{width:min(1100px,92vw);margin:0 auto}
 
-    .hero { padding: 96px 0 70px; }
-    .hero-grid {
-      display:grid; grid-template-columns: 1.3fr .9fr; gap: 28px;
-      align-items: stretch;
-    }
-    .glass {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .hero-main { padding: 42px; }
-    h1 { margin: 10px 0 12px; font-size: clamp(2rem, 4.5vw, 3.65rem); line-height: 1.08; }
-    .gradient { background: linear-gradient(120deg, var(--brand), var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
-    .hero-main p { color: var(--muted); max-width: 64ch; }
-    .cta { display:flex; gap:12px; margin-top: 26px; flex-wrap: wrap; }
-    .btn { padding: 12px 18px; border-radius: 12px; font-weight: 700; text-decoration:none; font-size: .96rem; }
-    .btn-primary { background: linear-gradient(120deg, var(--brand), #5b7bf9); color: #fff; }
-    .btn-secondary { border:1px solid var(--border); color:var(--text); }
+    header{position:sticky;top:0;z-index:100;background:rgba(247,244,239,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+    .brand{font-family:"Playfair Display",serif;font-size:1.4rem;letter-spacing:.4px}
+    .brand span{color:var(--accent)}
+    .nav-links{display:flex;gap:20px;flex-wrap:wrap}
+    .nav-links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.93rem}
+    .nav-links a:hover{color:var(--accent)}
 
-    .hero-side { padding: 30px; display:grid; gap:14px; }
-    .stat { border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
-    .stat h3 { margin: 0; font-size: 1.65rem; }
-    .stat p { margin: 4px 0 0; color: var(--muted); font-size: .92rem; }
+    .hero{padding:80px 0 44px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:stretch}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius)}
+    .intro{padding:48px}
+    .eyebrow{font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(2.2rem,4.6vw,4rem);line-height:1.05;margin:12px 0 18px}
+    .lead{color:var(--muted);max-width:60ch}
+    .cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+    .btn{padding:11px 18px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.92rem}
+    .btn-primary{background:var(--ink);color:#fff}
+    .btn-primary:hover{background:#333}
+    .btn-outline{border:1px solid var(--ink);color:var(--ink)}
 
-    section { padding: 28px 0; }
-    .section-head { display:flex; align-items:center; justify-content:space-between; margin-bottom: 20px; }
-    h2 { margin: 0; font-size: clamp(1.35rem, 2.5vw, 2rem); }
+    .profile{padding:28px;display:grid;gap:14px}
+    .metric{background:#faf7f2;border:1px solid var(--line);border-radius:14px;padding:16px}
+    .metric strong{display:block;font-size:1.6rem;font-family:"Playfair Display",serif}
+    .metric span{color:var(--muted);font-size:.9rem}
 
-    .cards { display:grid; gap:16px; }
-    .exp-card, .project { padding: 24px; }
-    .row { display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
-    .meta { color: var(--muted); font-size: .92rem; }
-    ul { margin: 10px 0 0 18px; color: #ccdaf5; }
+    section{padding:16px 0 20px}
+    .section-head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+    h2{font-family:"Playfair Display",serif;font-size:1.7rem;margin:0}
+    .sub{color:var(--muted);font-size:.9rem}
 
-    .project-grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:16px; }
-    .project h3 { margin-top: 0; }
+    .timeline,.project-grid,.skills-grid{display:grid;gap:15px}
+    .entry,.project,.skill{padding:24px}
+    .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .role{font-weight:700;font-size:1.06rem}
+    .meta{color:var(--muted);font-size:.92rem}
+    ul{margin:10px 0 0 18px;padding:0}
 
-    .skills {
-      display:grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px;
-    }
-    .skill-box { padding: 18px; }
-    .skill-box h4 { margin:0 0 10px; }
-    .tags { display:flex; flex-wrap:wrap; gap:8px; }
-    .tags span { font-size:.83rem; border:1px solid var(--border); padding:6px 10px; border-radius:999px; color: #bdd1ff; }
+    .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .project .stack{display:block;color:var(--accent);font-weight:600;font-size:.88rem;margin-top:4px}
 
-    footer { padding: 60px 0 90px; }
-    .contact { padding: 28px; text-align:center; }
-    .contact a { color: #cde0ff; text-decoration:none; }
+    .skills-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .chip{padding:5px 10px;border-radius:999px;background:#f4ede4;border:1px solid #eadfcc;font-size:.82rem}
 
-    @media (max-width: 940px) {
-      .hero-grid, .project-grid, .skills { grid-template-columns: 1fr; }
-      .hero-main, .hero-side { padding: 24px; }
+    footer{padding:40px 0 80px}
+    .contact{padding:28px;text-align:center}
+    .contact p{margin:7px 0;color:var(--muted)}
+    .contact a{color:var(--ink);text-decoration:none;font-weight:600}
+
+    @media (max-width:940px){
+      .hero-grid,.project-grid,.skills-grid{grid-template-columns:1fr}
+      .intro{padding:30px}
     }
   </style>
 </head>
@@ -107,13 +83,9 @@
   <header>
     <div class="container">
       <nav>
-        <div class="logo">Tirumalareddy <span>Subbareddy</span></div>
-        <div class="links">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+        <div class="brand">Tirumalareddy <span>Subbareddy</span></div>
+        <div class="nav-links">
+          <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
         </div>
       </nav>
     </div>
@@ -122,88 +94,81 @@
   <main class="container">
     <section class="hero" id="about">
       <div class="hero-grid">
-        <article class="hero-main glass">
-          <span class="pill">AI/ML Engineer • Full Stack Developer</span>
-          <h1>Building <span class="gradient">intelligent products</span> with clean UX, reliable APIs, and measurable impact.</h1>
-          <p>
-            I design and ship end-to-end digital experiences—from polished interfaces to scalable backend services.
-            My focus is on blending machine learning with practical product engineering to deliver fast, usable, and data-driven applications.
-          </p>
+        <article class="intro card">
+          <div class="eyebrow">AI / ML Engineer & Full Stack Developer</div>
+          <h1>Crafting elegant digital products with engineering precision.</h1>
+          <p class="lead">I build polished web experiences and intelligent systems that solve real user problems. From UI architecture to ML-powered workflows, I focus on speed, clarity, and measurable outcomes.</p>
           <div class="cta">
-            <a class="btn btn-primary" href="mailto:tirumalareddysai2004@gmail.com">Let’s Collaborate</a>
-            <a class="btn btn-secondary" href="assets/Subbareddy-Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+            <a href="mailto:tirumalareddysai2004@gmail.com" class="btn btn-primary">Hire Me</a>
+            <a href="assets/Subbareddy-Resume.pdf" target="_blank" rel="noopener" class="btn btn-outline">Download Résumé</a>
           </div>
         </article>
-
-        <aside class="hero-side glass">
-          <div class="stat"><h3>9.4%</h3><p>Prediction error achieved in IPL match outcome model.</p></div>
-          <div class="stat"><h3>40%</h3><p>Transcript analysis time reduced in YouTube insights workflow.</p></div>
-          <div class="stat"><h3>2026</h3><p>B.Tech in CSE expected at Kalasalingam University.</p></div>
+        <aside class="profile card">
+          <div class="metric"><strong>2022–2026</strong><span>B.Tech in CSE · Kalasalingam University</span></div>
+          <div class="metric"><strong>99.4%</strong><span>Accuracy on IPL match prediction model</span></div>
+          <div class="metric"><strong>40%</strong><span>Faster transcript analysis in AI insights project</span></div>
         </aside>
       </div>
     </section>
 
     <section id="experience">
-      <div class="section-head"><h2>Professional Experience</h2><span class="pill">Latest Role</span></div>
-      <div class="cards">
-        <article class="exp-card glass">
+      <div class="section-head"><h2>Experience</h2><div class="sub">Hands-on product delivery</div></div>
+      <div class="timeline">
+        <article class="entry card">
           <div class="row">
-            <div>
-              <h3>Full Stack Developer Intern — Phemesoftware Pvt Ltd</h3>
-              <div class="meta">Bangalore, India (Remote)</div>
-            </div>
-            <div class="meta">Oct 2024 – Dec 2024</div>
+            <div><div class="role">Full Stack Developer Intern · Phemesoftware Pvt Ltd</div><div class="meta">Bangalore, India (Remote)</div></div>
+            <div class="meta">Oct 2024 — Dec 2024</div>
           </div>
           <ul>
-            <li>Built a CodeChef-style educational platform with separate faculty and student portals.</li>
-            <li>Implemented secure REST APIs using Express.js, JWT, and MongoDB.</li>
-            <li>Integrated an AI chatbot using Gemini API for context-aware student query assistance.</li>
-            <li>Developed frontend with React and Tailwind CSS, deployed on Vercel.</li>
+            <li>Designed and developed a CodeChef-inspired educational platform for faculty and students.</li>
+            <li>Built secure backend services using Express.js, JWT authentication, and MongoDB.</li>
+            <li>Integrated Gemini API chatbot for contextual academic Q&A.</li>
+            <li>Implemented responsive interfaces in React + Tailwind CSS and deployed on Vercel.</li>
           </ul>
         </article>
       </div>
     </section>
 
     <section id="projects">
-      <div class="section-head"><h2>Featured Projects</h2><span class="pill">Product + ML</span></div>
+      <div class="section-head"><h2>Selected Projects</h2><div class="sub">Applied ML + product thinking</div></div>
       <div class="project-grid">
-        <article class="project glass">
-          <h3>IPL Match Prediction</h3>
-          <p class="meta">Python · Streamlit · Plotly · Machine Learning</p>
+        <article class="project card">
+          <div class="role">IPL Match Prediction</div>
+          <span class="stack">Python · Streamlit · Plotly · Machine Learning</span>
           <ul>
-            <li>Engineered batting and bowling impact scores to quantify team strength.</li>
-            <li>Achieved 99.4% model accuracy for IPL outcome predictions.</li>
-            <li>Shipped an interactive Streamlit web app for real-time simulations.</li>
+            <li>Engineered batting and bowling impact scoring for outcome probabilities.</li>
+            <li>Achieved 99.4% prediction accuracy with optimized feature selection.</li>
+            <li>Delivered a real-time simulation dashboard for match analysis.</li>
           </ul>
         </article>
-        <article class="project glass">
-          <h3>YouTube Insights Generator</h3>
-          <p class="meta">Python · Gemini API · Streamlit · NLP</p>
+        <article class="project card">
+          <div class="role">YouTube Insights Generator</div>
+          <span class="stack">Python · Gemini API · Streamlit · NLP</span>
           <ul>
-            <li>Automated transcript summarization, Q&A, and explanation generation.</li>
-            <li>Added PDF export pipeline and structured content output.</li>
-            <li>Optimized analysis performance with a 40% runtime reduction.</li>
+            <li>Automated transcript summarization, key Q&A, and concept explanations.</li>
+            <li>Added PDF exports and structured report generation.</li>
+            <li>Reduced analysis time by 40% through pipeline optimization.</li>
           </ul>
         </article>
       </div>
     </section>
 
     <section id="skills">
-      <div class="section-head"><h2>Technical Toolkit</h2></div>
-      <div class="skills">
-        <article class="skill-box glass"><h4>Languages</h4><div class="tags"><span>C++</span><span>Java</span><span>JavaScript</span><span>Python</span></div></article>
-        <article class="skill-box glass"><h4>Frontend</h4><div class="tags"><span>React</span><span>Tailwind CSS</span><span>UI Prototyping</span></div></article>
-        <article class="skill-box glass"><h4>Backend</h4><div class="tags"><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>REST APIs</span></div></article>
-        <article class="skill-box glass"><h4>ML & Tools</h4><div class="tags"><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Git/GitHub</span></div></article>
+      <div class="section-head"><h2>Skills</h2><div class="sub">Core technical toolkit</div></div>
+      <div class="skills-grid">
+        <article class="skill card"><div class="role">Languages</div><div class="chips"><span class="chip">C++</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">Python</span></div></article>
+        <article class="skill card"><div class="role">Frontend</div><div class="chips"><span class="chip">React</span><span class="chip">Tailwind CSS</span><span class="chip">Responsive Design</span></div></article>
+        <article class="skill card"><div class="role">Backend</div><div class="chips"><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">MongoDB</span><span class="chip">REST APIs</span></div></article>
+        <article class="skill card"><div class="role">ML & Tools</div><div class="chips"><span class="chip">Scikit-learn</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Git/GitHub</span></div></article>
       </div>
     </section>
   </main>
 
   <footer id="contact" class="container">
-    <div class="contact glass">
-      <h2>Let’s build something exceptional.</h2>
-      <p>Email: <a href="mailto:tirumalareddysai2004@gmail.com">tirumalareddysai2004@gmail.com</a> · Phone: <a href="tel:+919550281211">+91 95502 81211</a></p>
-      <p><a href="https://linkedin.com/in/tirumalareddysai" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Subbareddy2004" target="_blank" rel="noopener">GitHub</a></p>
+    <div class="contact card">
+      <h2>Let’s work together.</h2>
+      <p><a href="mailto:tirumalareddysai2004@gmail.com">tirumalareddysai2004@gmail.com</a> · <a href="tel:+919550281211">+91 95502 81211</a></p>
+      <p><a target="_blank" rel="noopener" href="https://linkedin.com/in/tirumalareddysai">LinkedIn</a> · <a target="_blank" rel="noopener" href="https://github.com/Subbareddy2004">GitHub</a></p>
     </div>
   </footer>
 </body>
