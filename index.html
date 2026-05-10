@@ -3,173 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tirumalareddy Subbareddy | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Tirumalareddy Subbareddy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#f7f4ef;
-      --paper:#ffffff;
-      --ink:#1a1a1a;
-      --muted:#6b6b6b;
-      --line:#ddd5cb;
-      --accent:#b88351;
-      --accent-soft:#e8d2be;
-      --radius:18px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6}
-    .container{width:min(1100px,92vw);margin:0 auto}
-
-    header{position:sticky;top:0;z-index:100;background:rgba(247,244,239,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-    nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
-    .brand{font-family:"Playfair Display",serif;font-size:1.4rem;letter-spacing:.4px}
-    .brand span{color:var(--accent)}
-    .nav-links{display:flex;gap:20px;flex-wrap:wrap}
-    .nav-links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.93rem}
-    .nav-links a:hover{color:var(--accent)}
-
-    .hero{padding:80px 0 44px}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:stretch}
-    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius)}
-    .intro{padding:48px}
-    .eyebrow{font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700}
-    h1{font-family:"Playfair Display",serif;font-size:clamp(2.2rem,4.6vw,4rem);line-height:1.05;margin:12px 0 18px}
-    .lead{color:var(--muted);max-width:60ch}
-    .cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
-    .btn{padding:11px 18px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.92rem}
-    .btn-primary{background:var(--ink);color:#fff}
-    .btn-primary:hover{background:#333}
-    .btn-outline{border:1px solid var(--ink);color:var(--ink)}
-
-    .profile{padding:28px;display:grid;gap:14px}
-    .metric{background:#faf7f2;border:1px solid var(--line);border-radius:14px;padding:16px}
-    .metric strong{display:block;font-size:1.6rem;font-family:"Playfair Display",serif}
-    .metric span{color:var(--muted);font-size:.9rem}
-
-    section{padding:16px 0 20px}
-    .section-head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
-    h2{font-family:"Playfair Display",serif;font-size:1.7rem;margin:0}
-    .sub{color:var(--muted);font-size:.9rem}
-
-    .timeline,.project-grid,.skills-grid{display:grid;gap:15px}
-    .entry,.project,.skill{padding:24px}
-    .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-    .role{font-weight:700;font-size:1.06rem}
-    .meta{color:var(--muted);font-size:.92rem}
-    ul{margin:10px 0 0 18px;padding:0}
-
-    .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .project .stack{display:block;color:var(--accent);font-weight:600;font-size:.88rem;margin-top:4px}
-
-    .skills-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-    .chip{padding:5px 10px;border-radius:999px;background:#f4ede4;border:1px solid #eadfcc;font-size:.82rem}
-
-    footer{padding:40px 0 80px}
-    .contact{padding:28px;text-align:center}
-    .contact p{margin:7px 0;color:var(--muted)}
-    .contact a{color:var(--ink);text-decoration:none;font-weight:600}
-
-    @media (max-width:940px){
-      .hero-grid,.project-grid,.skills-grid{grid-template-columns:1fr}
-      .intro{padding:30px}
-    }
+    :root{--bg:#ececec;--panel:#f6f6f6;--ink:#222;--muted:#666;--line:#d5d5d5;--link:#2456d8;--max:820px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+    a{color:var(--link);text-decoration:underline}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 14px}
+    header{padding:22px 0 12px}
+    .top{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:50%;background:linear-gradient(140deg,#191919,#6f6f6f);display:grid;place-items:center;color:#fff;font-weight:700}
+    h1{margin:0 0 4px;font-size:1.55rem}
+    .muted{color:var(--muted);font-size:.9rem}
+    .icon-row{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap}
+    .dot{width:24px;height:24px;border-radius:50%;background:#3b3b3b;color:#fff;font-size:.72rem;display:grid;place-items:center;text-decoration:none}
+    .section{padding:18px 0;border-top:1px solid var(--line)}
+    .section h2{font-size:1.5rem;margin:0 0 12px;font-weight:600;text-transform:lowercase}
+    .feed{display:grid;gap:10px}
+    .item{display:grid;grid-template-columns:58px 1fr;gap:10px}
+    .date{color:#888;font-size:.8rem;padding-top:2px}
+    .card{background:var(--panel);border:1px solid #dcdcdc;border-radius:8px;padding:8px 10px}
+    .title{font-weight:600}
+    .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+    .thumb{aspect-ratio:16/10;background:linear-gradient(130deg,#1f2b53,#5396d6);border-radius:6px;position:relative;overflow:hidden}
+    .thumb:nth-child(3n){background:linear-gradient(130deg,#703878,#cc6fa3)}
+    .thumb:nth-child(4n){background:linear-gradient(130deg,#2d5b2f,#7fb35f)}
+    .thumb span{position:absolute;left:8px;bottom:6px;color:#fff;font-size:.72rem;font-weight:600;text-shadow:0 2px 6px #000}
+    .small-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+    .small{aspect-ratio:16/9;background:#fff;border:1px solid #d8d8d8;border-radius:6px;display:grid;place-items:center;font-size:.72rem;color:#777}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:3px 0}
+    .split{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+    @media (max-width:860px){.gallery{grid-template-columns:repeat(2,1fr)}.small-grid{grid-template-columns:repeat(2,1fr)}.split,.top{grid-template-columns:1fr}.avatar{margin:auto}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand">Tirumalareddy <span>Subbareddy</span></div>
-        <div class="nav-links">
-          <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+  <div class="wrap">
+    <header>
+      <div class="top">
+        <div class="avatar">TS</div>
+        <div>
+          <h1>Tirumalareddy Subbareddy</h1>
+          <div class="muted">Full-stack + AI engineer. I build practical products across ML, APIs, and web UX.</div>
+          <div class="muted"><a href="mailto:tirumalareddysai2004@gmail.com">tirumalareddysai2004@gmail.com</a> · <a href="https://linkedin.com/in/tirumalareddysai" target="_blank">linkedin</a> · <a href="https://github.com/Subbareddy2004" target="_blank">github</a> · <a href="assets/Subbareddy-Resume.pdf" target="_blank">resume</a></div>
+          <div class="icon-row">
+            <a class="dot" href="#">in</a><a class="dot" href="#">gh</a><a class="dot" href="#">yt</a><a class="dot" href="#">ml</a>
+          </div>
         </div>
-      </nav>
-    </div>
-  </header>
+      </div>
+    </header>
 
-  <main class="container">
-    <section class="hero" id="about">
-      <div class="hero-grid">
-        <article class="intro card">
-          <div class="eyebrow">AI / ML Engineer & Full Stack Developer</div>
-          <h1>Crafting elegant digital products with engineering precision.</h1>
-          <p class="lead">I build polished web experiences and intelligent systems that solve real user problems. From UI architecture to ML-powered workflows, I focus on speed, clarity, and measurable outcomes.</p>
-          <div class="cta">
-            <a href="mailto:tirumalareddysai2004@gmail.com" class="btn btn-primary">Hire Me</a>
-            <a href="assets/Subbareddy-Resume.pdf" target="_blank" rel="noopener" class="btn btn-outline">Download Résumé</a>
-          </div>
-        </article>
-        <aside class="profile card">
-          <div class="metric"><strong>2022–2026</strong><span>B.Tech in CSE · Kalasalingam University</span></div>
-          <div class="metric"><strong>99.4%</strong><span>Accuracy on IPL match prediction model</span></div>
-          <div class="metric"><strong>40%</strong><span>Faster transcript analysis in AI insights project</span></div>
-        </aside>
+    <section class="section">
+      <div class="feed">
+        <div class="item"><div class="date">2026</div><div class="card"><span class="title">Published:</span> <a href="#">A Deep Learning Approach to Oral Cancer Detection Using Swin Transformers</a> at ICETC 2026.</div></div>
+        <div class="item"><div class="date">2025</div><div class="card"><span class="title">Hackathon:</span> secured <b>2nd place</b> at Build-A-Bot 24hrs, Kalasalingam University.</div></div>
+        <div class="item"><div class="date">2024</div><div class="card"><span class="title">Internship:</span> shipped CodeChef-inspired educational platform at Phemesoftware (React, Express, MongoDB, Gemini API).</div></div>
       </div>
     </section>
 
-    <section id="experience">
-      <div class="section-head"><h2>Experience</h2><div class="sub">Hands-on product delivery</div></div>
-      <div class="timeline">
-        <article class="entry card">
-          <div class="row">
-            <div><div class="role">Full Stack Developer Intern · Phemesoftware Pvt Ltd</div><div class="meta">Bangalore, India (Remote)</div></div>
-            <div class="meta">Oct 2024 — Dec 2024</div>
-          </div>
-          <ul>
-            <li>Designed and developed a CodeChef-inspired educational platform for faculty and students.</li>
-            <li>Built secure backend services using Express.js, JWT authentication, and MongoDB.</li>
-            <li>Integrated Gemini API chatbot for contextual academic Q&A.</li>
-            <li>Implemented responsive interfaces in React + Tailwind CSS and deployed on Vercel.</li>
-          </ul>
-        </article>
+    <section class="section">
+      <h2>featured talks</h2>
+      <div class="gallery">
+        <a class="thumb" href="#"><span>Building AI Products</span></a>
+        <a class="thumb" href="#"><span>LLM APIs in Practice</span></a>
+        <a class="thumb" href="#"><span>Career in ML Engineering</span></a>
+        <a class="thumb" href="#"><span>Realtime Prediction Apps</span></a>
+        <a class="thumb" href="#"><span>React UX Architecture</span></a>
+        <a class="thumb" href="#"><span>Prompt Design Systems</span></a>
+        <a class="thumb" href="#"><span>Deploying on Vercel</span></a>
+        <a class="thumb" href="#"><span>From Idea to Product</span></a>
       </div>
     </section>
 
-    <section id="projects">
-      <div class="section-head"><h2>Selected Projects</h2><div class="sub">Applied ML + product thinking</div></div>
-      <div class="project-grid">
-        <article class="project card">
-          <div class="role">IPL Match Prediction</div>
-          <span class="stack">Python · Streamlit · Plotly · Machine Learning</span>
-          <ul>
-            <li>Engineered batting and bowling impact scoring for outcome probabilities.</li>
-            <li>Achieved 99.4% prediction accuracy with optimized feature selection.</li>
-            <li>Delivered a real-time simulation dashboard for match analysis.</li>
-          </ul>
-        </article>
-        <article class="project card">
-          <div class="role">YouTube Insights Generator</div>
-          <span class="stack">Python · Gemini API · Streamlit · NLP</span>
-          <ul>
-            <li>Automated transcript summarization, key Q&A, and concept explanations.</li>
-            <li>Added PDF exports and structured report generation.</li>
-            <li>Reduced analysis time by 40% through pipeline optimization.</li>
-          </ul>
-        </article>
+    <section class="section">
+      <h2>teaching</h2>
+      <div class="small-grid">
+        <div class="small">ML Fundamentals</div><div class="small">Python for DS</div><div class="small">NLP Basics</div><div class="small">API Security</div><div class="small">Interview Prep</div>
+        <div class="small">Git/GitHub</div><div class="small">Data Viz</div><div class="small">Streamlit</div><div class="small">MongoDB</div><div class="small">React Patterns</div>
       </div>
     </section>
 
-    <section id="skills">
-      <div class="section-head"><h2>Skills</h2><div class="sub">Core technical toolkit</div></div>
-      <div class="skills-grid">
-        <article class="skill card"><div class="role">Languages</div><div class="chips"><span class="chip">C++</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">Python</span></div></article>
-        <article class="skill card"><div class="role">Frontend</div><div class="chips"><span class="chip">React</span><span class="chip">Tailwind CSS</span><span class="chip">Responsive Design</span></div></article>
-        <article class="skill card"><div class="role">Backend</div><div class="chips"><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">MongoDB</span><span class="chip">REST APIs</span></div></article>
-        <article class="skill card"><div class="role">ML & Tools</div><div class="chips"><span class="chip">Scikit-learn</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Git/GitHub</span></div></article>
+    <section class="section split">
+      <div>
+        <h2>featured writing</h2>
+        <ul>
+          <li><a href="#">What I learned building an end-to-end AI student portal</a></li>
+          <li><a href="#">Reducing inference latency in Gemini-powered workflows</a></li>
+          <li><a href="#">How to design recruiter-friendly portfolio projects</a></li>
+          <li><a href="#">Practical guide to JWT + MongoDB auth in Express</a></li>
+          <li><a href="#">From Kaggle notebooks to production-ready ML apps</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>bio</h2>
+        <p class="muted">I’m an engineer focused on combining machine learning with real product delivery. My work spans web development, API design, and intelligent automation with a strong emphasis on measurable outcomes and clean UX.</p>
       </div>
     </section>
-  </main>
 
-  <footer id="contact" class="container">
-    <div class="contact card">
-      <h2>Let’s work together.</h2>
-      <p><a href="mailto:tirumalareddysai2004@gmail.com">tirumalareddysai2004@gmail.com</a> · <a href="tel:+919550281211">+91 95502 81211</a></p>
-      <p><a target="_blank" rel="noopener" href="https://linkedin.com/in/tirumalareddysai">LinkedIn</a> · <a target="_blank" rel="noopener" href="https://github.com/Subbareddy2004">GitHub</a></p>
-    </div>
-  </footer>
+    <section class="section">
+      <h2>pet projects</h2>
+      <div class="feed">
+        <div class="card"><span class="title">IPL Match Prediction</span> · Python, Streamlit, Plotly. Built a live dashboard with 99.4% predictive accuracy and explainable team impact metrics.</div>
+        <div class="card"><span class="title">YouTube Insights Generator</span> · Gemini API, NLP. Auto-generates summaries, Q&A, and PDF exports with 40% faster processing.</div>
+        <div class="card"><span class="title">Student Coding Arena</span> · React, Node, MongoDB. Faculty + student portals, challenge management, judging workflows.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>publications</h2>
+      <ul>
+        <li><a href="#">A Deep Learning Approach to Oral Cancer Detection Using Swin Transformers</a> — ICETC 2026.</li>
+        <li><a href="#">Optimizing Educational Coding Platforms with Adaptive Analytics</a> — preprint.</li>
+        <li><a href="#">Evaluation of Retrieval-Augmented Student Assistants in CS Education</a> — working draft.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>misc unsorted</h2>
+      <ul>
+        <li>Open to full-time software/ML engineer roles from <b>June 2026</b>.</li>
+        <li>Interested in developer tools, education technology, and applied AI systems.</li>
+        <li>Based in India, available for remote collaboration globally.</li>
+      </ul>
+    </section>
+  </div>
 </body>
 </html>
